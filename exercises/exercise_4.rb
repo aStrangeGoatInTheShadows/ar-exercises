@@ -15,9 +15,14 @@ Yaletown = Store.create(name: "Yaletown ", annual_revenue: 430000, mens_apparel:
 
 @mens_stores = Store.where(mens_apparel:true)
 
-@mens_stores.each {|key, value| puts "k:#{key} value:#{value}" }
+Yaletown.each do |key, value|
+  puts "Yaletown's #{key} is #{value}"
+end
 
+# NOT CURRENTLY WORKING
 # Loop through each of these stores and output their name and annual revenue on each line.
+# @mens_stores.each {|key, value| puts "k:#{key} value:#{value}" }
+
 # Exercise 4: Loading a subset of stores
 
 # Do another fetch but this time load stores that carry women's apparel and are generating less than $1M in annual revenue.
